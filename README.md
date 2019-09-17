@@ -1,3 +1,6 @@
+# teste-pwa-app
+Aprendendo o básico de construção de uma PWA utilizando React JS
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
