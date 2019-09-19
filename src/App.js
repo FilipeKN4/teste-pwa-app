@@ -1,26 +1,17 @@
 import React from 'react';
-import logo from './logo.svg';
+import HelloWorld from './helloWorld';
 import './App.css';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          É Hora do Show!!!
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+    <div className="container-fluid">
+        <div className="App">
+            <HelloWorld name="Igor"/>
+            <HelloWorld name="Hiroshi"/>
+            <HelloWorld name="Toyoshima"/>
+            <HelloWorld name="Dick"/>
+        </div>
+    </div>);
+};
 
 export default App;
