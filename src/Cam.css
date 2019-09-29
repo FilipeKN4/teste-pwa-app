@@ -1,0 +1,8 @@
+.Cam {
+    border: 10px solid black;
+    text-align: center;
+    background: #ff0000;
+    color: #333;
+    margin: 30px;
+    padding: 20px;
+}

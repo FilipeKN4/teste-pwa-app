@@ -9,33 +9,33 @@ const urlsToCache = [
 
 // realiza instalações.
 self.addEventListener('install', function (event) {
-    event.waitUntil(
-      caches.open(CACHE_NAME)
-        .then(function (cache) {
-          return cache.addAll(urlsToCache);
-        })
-    );
-  });
+  event.waitUntil(
+    caches.open(CACHE_NAME)
+      .then(function (cache) {
+        return cache.addAll(urlsToCache);
+      })
+  );
+});
 
 // verifica se tem cache antigo, limpa e adiciona o novo.
 self.addEventListener("activate", event => {
-    const cacheWhitelist = [CACHE_NAME];
-    event.waitUntil(
-        caches.keys().then(keyList =>
-        Promise.all(keyList.map(key => {
-            if (!cacheWhitelist.includes(key)) {
-            return caches.delete(key);
-            }
-        }))
-        )
-    );
+  const cacheWhitelist = [CACHE_NAME];
+  event.waitUntil(
+      caches.keys().then(keyList =>
+      Promise.all(keyList.map(key => {
+          if (!cacheWhitelist.includes(key)) {
+          return caches.delete(key);
+          }
+      }))
+      )
+  );
 });
 
 // buscar no cache se já possui um recurso específico para retornar ao usuário.
 self.addEventListener('fetch', function (event) {
-    event.respondWith(
-      caches.match(event.request).then(response => {
-        return response || fetch(event.request);
-      })
-    );
-  });
+  event.respondWith(
+    caches.match(event.request).then(response => {
+      return response || fetch(event.request);
+    })
+  );
+});

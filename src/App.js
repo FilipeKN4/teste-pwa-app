@@ -1,5 +1,6 @@
 import React from 'react';
 import HelloWorld from './helloWorld';
+import Cam from './Cam';
 import './App.css';
 
 const App = () => {
@@ -9,8 +10,9 @@ const App = () => {
             <HelloWorld name="Igor"/>
             <HelloWorld name="Hiroshi"/>
             <HelloWorld name="Toyoshima"/>
-            <HelloWorld name="Dick"/>
-        </div>
+            <HelloWorld name="Dick"/> 
+            <Cam />
+        </div> 
     </div>);
 };
 

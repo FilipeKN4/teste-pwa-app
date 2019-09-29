@@ -3,12 +3,18 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "instascan-umd": "^1.0.1",
+    "jsqr": "^1.2.0",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
-    "react-scripts": "3.1.1"
+    "react-instascan": "^1.0.0",
+    "react-qr-reader": "^2.2.1",
+    "react-qr-scanner": "0.0.8",
+    "react-scripts": "3.1.1",
+    "reactive-qr": "^0.1.7"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "export HTTPS=true&&PORT=3000 react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
